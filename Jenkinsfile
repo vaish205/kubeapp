@@ -4,7 +4,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 echo 'Building docker image...'
-                bat 'docker build -t myapp:regevent .'
+                bat 'docker build -t myapp1 .'
             }
         }
         stage('docker login'){
@@ -16,7 +16,7 @@ pipeline{
         stage('Push docker image'){
             steps{
                 echo 'Pushing docker image'
-                bat 'docker tag myapp:regevent vaish205/sample1:latest'
+                bat 'docker tag myapp1 vaish205/sample1:latest'
                 bat 'docker push vaish205/sample1:latest'
             }
         }
