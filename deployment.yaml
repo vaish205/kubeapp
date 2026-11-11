@@ -1,10 +1,9 @@
-
 apiVersion: apps/v1
 kind: deployment
 metadata:
   name: kubedemoapp-deployment
   spec:
-    replica:1
+    replicas:1
     selector:
       matchLabels:
         app: kubedemoapp
