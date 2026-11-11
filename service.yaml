@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: deployment
+apiVersion: v1
+kind: Service
 metadata:
-	name: kubedemoapp-deployment
+	name: kubedemoapp-service
 spec:
 	type: NodePort
 	selector:
@@ -11,4 +11,3 @@ spec:
 			port: 5000
 			targetPort: 5000
 			nodePort: 30088
-
