@@ -1,7 +1,7 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-	name: kubedemoapp-service
+  name: kubedemoapp-deployment
 spec:
 	type: NodePort
 	selector:
