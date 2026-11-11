@@ -4,19 +4,19 @@ pipeline{
         stage('Build docker image'){
             steps{
                 echo 'Building docker image...'
-                bat 'docker build -t myapp:latest .'
+                bat 'docker build -t myapp:regevent .'
             }
         }
         stage('docker login'){
             steps{
-                echo 'Logging into docker registry...'
+                echo 'Logging into docker registry'
                 bat 'docker login -u vaish205 -p Tejuvaishu@2005'
             }
         }
         stage('Push docker image'){
             steps{
-                echo 'Pushing docker image...'
-                bat 'docker tag myapp:latest vaish205/sample1:latest'
+                echo 'Pushing docker image'
+                bat 'docker tag myapp:regevent vaish205/sample1:latest'
                 bat 'docker push vaish205/sample1:latest'
             }
         }
