@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: kubedemoapp-deployment
 spec:
-	type: NodePort
-	selector:
+  type: NodePort
+  selector:
 		app: kubedemoapp
-	ports:
+  ports:
 		- protocol: TCP
 			port: 5000
 			targetPort: 5000
