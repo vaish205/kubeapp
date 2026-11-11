@@ -1,6 +1,6 @@
 
 apiVersion: apps/v1
-kind: Deployment
+kind: deployment
 metadata:
   name: kubedemoapp-deployment
   spec:
