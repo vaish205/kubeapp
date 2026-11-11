@@ -16,8 +16,8 @@ pipeline{
         stage('Push docker image'){
             steps{
                 echo 'Pushing docker image'
-                bat 'docker tag myapp1 vaish205/sample1:latest'
-                bat 'docker push vaish205/sample1:latest'
+                bat 'docker tag myapp1 vaish205/sample1'
+                bat 'docker push vaish205/sample1'
             }
         }
         stage('Deploy to Kubernetes'){
