@@ -15,6 +15,6 @@ metadata:
       spec:
         containers:
         - name: kubedemoapp
-          image: vaish205/sample1:latest
+          image: vaish205/sample1
           ports:
           - containerPort: 5000
